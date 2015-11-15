@@ -1,0 +1,112 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE>qshKeyCommander1 - Информация о WinLIRC</TITLE>
+<META NAME="Author" CONTENT="<Quash!> aka Павел Х">
+<META NAME="Keywords" CONTENT="quash, qshKeyCommander">
+<STYLE>
+A:LINK   {COLOR:#0000FF; TEXT-DECORATION:NONE;}
+A:VISITED{COLOR:#0000FF; TEXT-DECORATION:NONE;}
+A:HOVER  {COLOR:#FF0000; TEXT-DECORATION:UNDERLINE;}
+</STYLE>
+</HEAD>
+
+<BODY>
+
+<TABLE cellSpacing=0 cellPadding=0 width="80%" border=0 ALIGN=center>
+<TR><TD STYLE="text-align:justify"><FONT SIZE=2 FACE="verdana">
+
+<H4>Информация о WinLIRC</H4>
+WinLIRC - это программа, предназначенная для отслеживания сигналов от пульта дистанционного управления. WinLIRC расшифровывается как Windows Linux Infrared Remote Control. То есть впервые она была создана на Linux, а позже перенесена на платформу Windows.
+<br><br>
+Программа создаёт на компьютере сервер и при получении сигналов от ПДУ через COM-порт, передаёт данные всем подключенным программам. qshKeyCommander как раз является такой программой и может обрабатывать эти данные, выполняя действие, которое было сопоставлено с нажатой кнопкой.
+<br><br>
+Ниже приведена схема, которую можно спаять самому(ой), не испытывая каких-либо трудностей:
+<br><br>
+<CENTER><IMG SRC="winlirc_scheme.gif" WIDTH="400" HEIGHT="290" BORDER=0 ALT="Схема принятия сигналов от ПДУ"></CENTER>
+<br>
+Стоимость всей схемы обойдётся менее, чем в 50 рублей (зима 2004г. в Екатеринбурге), причём пульт должен иметь несущую частоту 30-40 кГц (мои подопытные пульты - Samsung AA59-00332A и Samsung AA59-00332D).
+<br><br>
+DA1 и DA2 могут быть заменёны на какие-либо аналоги. В моём случае нужного фотоприёмника в магазине не оказалось, хотя это и самый большой магазин в городе с огромным выбором деталей. После некоторого раздумья был взят фотоприёмник ???-1836, просто из-за того, что совпали цифры с TSOP 1836. DA2 - 78L05 тоже найти не получилось, пришлось воспользоваться его массивным отечественным аналогом КРЕН5А. 
+<br><br>
+Ниже представлены обозначения выходов к деталям, с которыми я работал:
+<br><br>
+<CENTER><IMG SRC="winlirc_outs.gif" WIDTH="279" HEIGHT="221" BORDER=0 ALT="Обозначение выводов у фотоприёмника и стабилизатора"></CENTER>
+<br>
+Если использовать стабилизатор 78L05, то сама схема получится очень маленькой и удобной для того, чтобы её где-нибудь незаметно закрепить и она не будет бросаться в глаза. 
+<br><br>
+Печатная плата со стабилизатором КРЕН5А: <A HREF="winlirc_plate.zip">winlirc_plate.zip (11 Кб)</A>
+<br><br>
+После того как схема собрана, вам потребуется программа-сервер WinLIRC:<br>
+<A HREF="http://winlirc.sourceforge.net/">http://winlirc.sourceforge.net/</A>
+<br><br>
+Теперь необходимо настроить программу (можно оставить настройки по умолчанию, где должен стоять тип приёмника DCD) и обучить её кнопкам пульта управления, так как ПДУ подаёт не однозначно определяемый сигнал и поэтому для отслеживания каждой кнопки записывается 64 его состояния. Хотя есть способ проще: можно просто скачать файл конфигурации своего пульта (<A HREF="http://lirc.sourceforge.net/remotes/">http://lirc.sourceforge.net/remotes/</A>), но не факт, что он там окажется...<br><br>
+Если конфигурационный файл пульта не был найден, то начнём обучение, тем более не такое оно уж и сложное:
+<br>
+1) В конфигурационном окне нужно вписать новый файл конфигурации, например, "Remote_Control.cf", или можно ввести название пульта.
+<br><br>
+2) Перед самим обучением можно удостовериться, что всё работает, зайдя в "Raw Codes" (там должны отображаться цифры). Если всё нормально, то переходим к самому обучению - "Learn".
+<br><br>
+3) Открылся диалог, в котором находится следующий текст:
+<br><br>
+This will record the signals from your remote control and create a config file for WinLIRC. Please enter a name for this remote.
+<br><br>
+Здесь необходимо ввести имя пульта и нажать Enter. Имена желательно задавать латинскими буквами, но это не строго. Строго только то, что имя не должно содержать пробелов, так как пробел используется как разделитель при передаче данных на сервер.
+<br><br>
+4) Далее будет выведено:
+<br><br>
+When learning and analyzing signals, a margin of error is used in order to
+handle the normal variations in the received signal. The margin of error ranges
+from 1% to 99%. The default is 25%, but larger values might be necessary depending
+on your hardware and software. If you are having trouble using your remote,
+try increasing this value. You may enter the allowable margin of error now,
+or press ENTER to use the default. Desired margin of error for this remote?
+(1-99, enter=25)
+<br><br>
+Здесь говорится про какие-то ошибки, как их будет обрабатывать программа, лучше оставить всё по умолчанию, просто нажав Enter.
+<br><br>
+5) Первый шаг:
+<br><br>
+Step One: Determine signal gap, signal length, and repeat codes.
+<br>
+You will be asked to press an arbitrary button a number of times.
+Please hold it in for at least one s second each time, and wait at least
+one second between keypresses. If you want to manually enter a signal gap
+and signal length, you may do so now (ie, "31000 52").
+Otherwise, just hit ENTER. Gap and length?
+<br><br>
+Что-то очень страшное про длину сигнала и повторение кодов :) - просто нажимаем Enter.
+<br><br>
+6) Инициализация:
+<br><br>
+Press a button. Please wait a second and press it again.
+<br><br>
+Необходимо нажать кнопку, подождать секунду и снова нажать ту же самую кнопку (как с мышкой ;), после чего будет выведено следующее сообщение:
+<br><br>
+Baseline initialized.
+<br><br>
+Всё просто отлично! Теперь следует поупражняться с нажатием той же самой кнопки около десяти раз, пока не будет выведено сообщение: "Press a button."
+<br><br>
+7) Теперь самое интересное:
+<br><br>
+This is a signal-repeating remote with no special repeat code.
+Holding down the button can quickly yield many copies of that button's code.
+Therefore, 64 samples of each button will be taken.
+You will be prompted to enter each button's name in turn.
+To finish recording buttons, enter a blank button name.
+<br><br>
+Будет задан вопрос об имени кнопки 1 "Button 1 name?", нужно ввести имя кнопки (желательно латинскими буквами, но БЕЗ пробелов). Затем будет произведён процесс записи 64 состояний устанавливаемой кнопки, будет выводиться:
+<br><br>
+matches=#, faults=#
+<br><br>
+Для того, чтобы запись прошла успешно, необходимо, чтобы "matches" дошло до значения 64, а "faults" было как можно меньшим.
+<br>
+Таким образом записываем остальные кнопки. Для того, чтобы закончить запись, нужно оставить поле ввода пустым и нажать Enter. Будет выведено сообщение о том, что запись прошла успешно.
+<br><br>
+8) Теперь заходим в диалог "Analyze", где должны получить подтверждение, что произведённые действия были правильными, после чего окно WinLIRC нужно спрятать и перейти в окно настройки кнопок WinLIRC в qshKeyCommander, где никаких проблем уже не будет :).
+
+</FONT></TD></TR>
+</TABLE>
+
+</BODY>
+</HTML>

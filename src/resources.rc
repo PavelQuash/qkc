@@ -1,0 +1,558 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Russian resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_RUS)
+#ifdef _WIN32
+LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
+#pragma code_page(1251)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_MAINMENU DIALOGEX 0, 0, 154, 121
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "qshKeyCommander - Главное Меню"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "           (&1)   Настройки программы",
+                    IDC_MAINMENU_SETTINGS,4,30,145,15,BS_LEFT | BS_VCENTER | 
+                    BS_FLAT
+    PUSHBUTTON      "           (&2)             Справка",IDC_MAINMENU_HELP,
+                    4,46,145,15,BS_LEFT | BS_VCENTER | BS_FLAT | NOT 
+                    WS_TABSTOP
+    PUSHBUTTON      "           (&3)          О программе",
+                    IDC_MAINMENU_ABOUT,4,62,145,15,BS_LEFT | BS_VCENTER | 
+                    BS_FLAT | NOT WS_TABSTOP
+    PUSHBUTTON      "           (&ё)         Спрятать окно",
+                    IDC_MAINMENU_HIDE,4,85,145,15,BS_LEFT | BS_VCENTER | 
+                    BS_FLAT
+    PUSHBUTTON      "           (&4)       Закончить работу",
+                    IDC_MAINMENU_QUIT,4,100,145,15,BS_LEFT | BS_VCENTER | 
+                    BS_FLAT | NOT WS_TABSTOP
+    CONTROL         102,IDC_STATIC,"Static",SS_BITMAP | SS_REALSIZEIMAGE | 
+                    SS_SUNKEN,4,5,145,20
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME | SS_SUNKEN | 
+                    WS_DISABLED,4,80,145,1
+END
+
+IDD_ABOUT DIALOGEX 0, 0, 236, 135
+STYLE DS_MODALFRAME | DS_SETFOREGROUND | DS_CENTER | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "О программе..."
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    ICON            IDI_LOGO,IDC_STATIC,7,7,20,20,SS_REALSIZEIMAGE,
+                    WS_EX_DLGMODALFRAME
+    RTEXT           "Программа:",IDC_ABOUT_PROGRAM_CAPTION,38,7,58,8
+    LTEXT           "qshKeyCommander",IDC_STATIC,102,7,127,8
+    RTEXT           "Версия:",IDC_ABOUT_VERSION_CAPTION,38,17,58,8
+    LTEXT           "#.### (##.##.200#г.)",IDC_ABOUT_VERSION,102,17,127,16
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,7,36,222,1
+    RTEXT           "Статус:",IDC_ABOUT_STATUS_CAPTION,7,41,53,8
+    LTEXT           "Freeware",IDC_ABOUT_STATUS,66,41,163,8
+    RTEXT           "www:",IDC_ABOUT_WWW_CAPTION,7,57,53,8
+    RTEXT           "e-mail:",IDC_ABOUT_EMAIL_CAPTION,7,75,53,8
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,7,91,222,1
+    LTEXT           "© <Quash!> aka Павел Х\n(г.Екатеринбург)",
+                    IDC_STATIC,7,112,106,16
+    PUSHBUTTON      "(&ё) Закрыть",IDC_ABOUT_CLOSE,145,114,84,14,BS_FLAT | 
+                    WS_GROUP
+    PUSHBUTTON      "http://qshZone.narod.ru/qkc",IDC_ABOUT_WWW,66,54,163,14,
+                    BS_FLAT | WS_GROUP
+    PUSHBUTTON      "mailto:qshDeveloper@mail.ru",IDC_ABOUT_EMAIL,66,72,163,
+                    14,BS_FLAT | NOT WS_TABSTOP
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,7,108,222,1
+    RTEXT           "Перевод:",IDC_ABOUT_LNGAUTHOR_CAPTION,7,96,53,8
+    LTEXT           "© <Quash!> (язык по умолчанию)",IDC_ABOUT_LNGAUTHOR,67,
+                    96,162,8
+END
+
+IDD_SETTINGS DIALOGEX 0, 0, 499, 330
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Настройки программы - qshKeyCommander.ini"
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "(&1) Клавиатура",IDC_SETTINGS_KBRD,7,75,79,14,BS_LEFT | 
+                    BS_VCENTER | BS_FLAT | WS_GROUP
+    PUSHBUTTON      "(&2) Мышка",IDC_SETTINGS_MOUSE,7,97,79,14,BS_LEFT | 
+                    BS_VCENTER | BS_FLAT | NOT WS_TABSTOP
+    PUSHBUTTON      "(&3) Жесты мышки",IDC_SETTINGS_GESTURES,7,119,79,14,
+                    BS_LEFT | BS_VCENTER | BS_FLAT | NOT WS_TABSTOP
+    PUSHBUTTON      "(&4) WinLIRC",IDC_SETTINGS_WIRC,7,140,79,14,BS_LEFT | 
+                    BS_VCENTER | BS_FLAT | NOT WS_TABSTOP
+    PUSHBUTTON      "(&5) Подключение",IDC_SETTINGS_PLUGLIST,7,175,79,14,
+                    BS_LEFT | BS_VCENTER | BS_FLAT | NOT WS_TABSTOP
+    PUSHBUTTON      "(&6) Информация",IDC_SETTINGS_PLUGLIST2,7,196,79,14,
+                    BS_LEFT | BS_VCENTER | BS_FLAT | WS_DISABLED | NOT 
+                    WS_TABSTOP
+    PUSHBUTTON      "(&7) Конфигурация",IDC_SETTINGS_CONFIGURE,7,230,79,14,
+                    BS_LEFT | BS_VCENTER | BS_FLAT | NOT WS_TABSTOP
+    PUSHBUTTON      "(&8) Дополнительные",IDC_SETTINGS_CONFIGURE2,7,252,79,
+                    14,BS_LEFT | BS_VCENTER | BS_FLAT | WS_DISABLED | NOT 
+                    WS_TABSTOP
+    PUSHBUTTON      "(&ё) Закрыть",IDC_SETTINGS_CLOSE,7,281,79,14,BS_LEFT | 
+                    BS_VCENTER | BS_FLAT | NOT WS_TABSTOP
+    PUSHBUTTON      "(&9) Помощь",IDC_SETTINGS_HELP,7,311,79,14,BS_LEFT | 
+                    BS_VCENTER | BS_FLAT | NOT WS_TABSTOP
+    CONTROL         112,IDC_STATIC,"Static",SS_BITMAP | SS_REALSIZEIMAGE | 
+                    SS_SUNKEN,8,7,78,50
+    LTEXT           "Сообщения:",IDC_SETTINGS_PLUGINS_CAPTION2,7,62,69,8,NOT 
+                    WS_GROUP
+    LTEXT           "Настройка модулей:",IDC_SETTINGS_PLUGINS_CAPTION,7,162,
+                    69,8,NOT WS_GROUP
+    LTEXT           "Программные:",IDC_SETTINGS_CONFIGURE_CAPTION,7,216,67,8,
+                    NOT WS_GROUP
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME | SS_SUNKEN,90,7,1,
+                    318
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME | SS_SUNKEN,79,66,
+                    12,1
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME | SS_SUNKEN,79,166,
+                    12,1
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME | SS_SUNKEN,80,220,
+                    11,1
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME | SS_SUNKEN | 
+                    WS_DISABLED,7,273,84,1
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME | SS_SUNKEN | 
+                    WS_DISABLED,7,302,84,1
+    LTEXT           "При выводе данного окна все подключенные модули остаются в памяти, но отслеживание сообщений прекращается до закрытия окна.\n\n",
+                    IDC_SETTINGS_HELP_CAPTION,97,8,395,316,0,
+                    WS_EX_STATICEDGE
+END
+
+IDD_SETTINGS_KBRD DIALOGEX 94, 7, 395, 315
+STYLE DS_MODALFRAME | DS_CONTROL | WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "Настройка сообщений от клавиш клавиатуры:",
+                    IDC_SETTINGS_KBRD_CAPTION,"Static",SS_LEFTNOWORDWRAP | 
+                    WS_GROUP,7,7,248,14,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE
+    CONTROL         "Включить отслеживание клавиш",IDC_SETTINGS_KBRD_KBRDON,
+                    "Button",BS_AUTOCHECKBOX | BS_LEFT | BS_VCENTER,261,7,
+                    127,14
+    LTEXT           "Активные модули:",
+                    IDC_SETTINGS_KBRD_ACTIVEPLUGINS_CAPTION,7,23,73,8
+    LTEXT           "Список команд модуля:",
+                    IDC_SETTINGS_KBRD_COMMANDS_CAPTION,85,23,303,8
+    LISTBOX         IDC_SETTINGS_KBRD_ACTIVEPLUGINS,7,31,73,259,LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "List1",IDC_SETTINGS_KBRD_PLUGINCOMMANDS,"SysListView32",
+                    LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | 
+                    LVS_NOSORTHEADER | WS_BORDER | WS_TABSTOP,85,31,303,259
+    PUSHBUTTON      "Изменить",IDC_SETTINGS_KBRD_CHANGEKEY,85,294,95,14,
+                    BS_FLAT
+    PUSHBUTTON      "Очистить",IDC_SETTINGS_KBRD_CLEAR,189,294,95,14,BS_FLAT
+    PUSHBUTTON      "Конфигурация",IDC_SETTINGS_KBRD_CONFIGURE,293,294,95,14,
+                    BS_FLAT
+END
+
+IDD_SETTINGS_WIRC DIALOGEX 94, 7, 395, 315
+STYLE DS_MODALFRAME | DS_CONTROL | WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "Настройка сообщений от кнопок WinLIRC:",
+                    IDC_SETTINGS_WIRC_CAPTION,"Static",SS_LEFTNOWORDWRAP | 
+                    WS_GROUP,7,7,248,14,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE
+    CONTROL         "Включить отслеживание кнопок",IDC_SETTINGS_WIRC_WIRCON,
+                    "Button",BS_AUTOCHECKBOX | BS_LEFT | BS_VCENTER,261,7,
+                    128,14
+    LTEXT           "Активные модули:",
+                    IDC_SETTINGS_WIRC_ACTIVEPLUGINS_CAPTION,7,23,73,8
+    LTEXT           "Список команд модуля:",IDC_SETTINGS_WIRC_COMMANDS,85,23,
+                    303,8
+    LISTBOX         IDC_SETTINGS_WIRC_ACTIVEPLUGINS,7,31,73,228,LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "List1",IDC_SETTINGS_WIRC_PLUGINCOMMANDS,"SysListView32",
+                    LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | 
+                    LVS_NOSORTHEADER | WS_BORDER | WS_TABSTOP,85,31,303,228
+    LTEXT           "WinLIRC сервер:",IDC_SETTINGS_WIRC_SERVER_CAPTION,7,261,
+                    73,8
+    EDITTEXT        IDC_SETTINGS_WIRC_SERVER,7,269,73,14,ES_AUTOHSCROLL
+    LTEXT           "WinLIRC порт:",IDC_SETTINGS_WIRC_PORT_CAPTION,7,285,73,
+                    8
+    EDITTEXT        IDC_SETTINGS_WIRC_PORT,7,294,73,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "connect/disconnect",IDC_SETTINGS_WIRC_CONDISCON,85,269,
+                    303,14,BS_FLAT
+    PUSHBUTTON      "Изменить",IDC_SETTINGS_WIRC_CHANGEKEY,85,294,95,14,
+                    BS_FLAT
+    PUSHBUTTON      "Очистить",IDC_SETTINGS_WIRC_CLEAR,189,294,95,14,BS_FLAT
+    PUSHBUTTON      "Конфигурация",IDC_SETTINGS_WIRC_CONFIGURE,293,294,95,14,
+                    BS_FLAT
+    LTEXT           "",IDC_SETTINGS_WIRC_STATUS,85,260,303,8
+END
+
+IDD_SETTINGS_CONFIGURE DIALOGEX 94, 7, 395, 315
+STYLE DS_MODALFRAME | DS_CONTROL | WS_CHILD
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CONTROL         "Настройка параметров программы:",
+                    IDC_SETTINGS_CONFIGURE_CAPTION,"Static",
+                    SS_LEFTNOWORDWRAP | WS_GROUP,7,7,381,14,
+                    WS_EX_DLGMODALFRAME | WS_EX_CLIENTEDGE
+    CONTROL         "Использовать WinHooks метод вместо RegisterHotKey",
+                    IDC_SETTINGS_CONFIGURE_USEWINHOOKS,"Button",
+                    BS_AUTOCHECKBOX | BS_MULTILINE | WS_TABSTOP,7,26,381,10
+    CONTROL         "Скрыть процесс от Task Manager'а при старте программы (только в Win9x)",
+                    IDC_SETTINGS_CONFIGURE_REGISTERSERVICEPROCESS,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,41,381,10
+    CONTROL         "Переключить раскладку клавиатуры при старте программы",
+                    IDC_SETTINGS_CONFIGURE_CHANGEKEYBOARDSTATE,"Button",
+                    BS_AUTOCHECKBOX | BS_MULTILINE | WS_TABSTOP,7,56,381,10
+    CONTROL         "Установить значок в трэе",
+                    IDC_SETTINGS_CONFIGURE_SHOWINTRAY,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,71,105,10
+    CONTROL         "Стирать после ввода одинаковые клавиши",
+                    IDC_SETTINGS_CONFIGURE_ANALOGS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,7,85,173,10
+    GROUPBOX        "Интеграция в реестр:",
+                    IDC_SETTINGS_CONFIGURE_INSTALLGROUP,7,177,132,50
+    PUSHBUTTON      "Добавить в автозагрузку",IDC_SETTINGS_CONFIGURE_INSTALL,
+                    13,189,120,14,BS_FLAT
+    PUSHBUTTON      "Удалить из автозагрузки",
+                    IDC_SETTINGS_CONFIGURE_UNINSTALL,13,207,120,14,BS_FLAT
+    GROUPBOX        "Язык:",IDC_SETTINGS_CONFIGURE_LANGUAGEGROUP,236,177,152,
+                    50
+    LISTBOX         IDC_SETTINGS_CONFIGURE_LANGUAGELIST,241,186,142,36,
+                    LBS_SORT | LBS_NOINTEGRALHEIGHT | LBS_MULTICOLUMN | 
+                    WS_HSCROLL | WS_TABSTOP
+    GROUPBOX        "Доступ к главному окну:",
+                    IDC_SETTINGS_CONFIGURE_ACCESSGROUP,7,233,381,75
+    CONTROL         "По трэю (левая клавиша мыши по иконке около системных часов)",
+                    IDC_SETTINGS_CONFIGURE_ACCESS_TRAY,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,17,244,268,10
+    CONTROL         "По комбинации клавиш:",
+                    IDC_SETTINGS_CONFIGURE_ACCESS_HOTKEY,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,17,257,93,10
+    EDITTEXT        IDC_SETTINGS_CONFIGURE_ACCESS_LBHOTKEY,115,255,98,12,
+                    ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "Изменить",IDC_SETTINGS_CONFIGURE_ACCESS_CHANGEHOTKEY,
+                    217,254,69,14,BS_FLAT
+    CONTROL         "По паролю(набирается в любом win-приложении) - защиты нет",
+                    IDC_SETTINGS_CONFIGURE_ACCESS_PASSWORD,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,17,269,269,10
+    RTEXT           "Пароль:",IDC_SETTINGS_PASSWORD_PASSWORD,27,282,45,8
+    EDITTEXT        IDC_SETTINGS_PSWRDENTER,75,280,73,12,ES_PASSWORD | 
+                    ES_AUTOHSCROLL
+    RTEXT           "Подтверждение:",IDC_SETTINGS_PASSWORD_CONFIRM,153,282,
+                    59,8
+    EDITTEXT        IDC_SETTINGS_PSWRDREENTER,215,280,73,12,ES_PASSWORD | 
+                    ES_AUTOHSCROLL
+    CONTROL         "По двойному запуску (запуск программы при уже загруженной её копии)",
+                    IDC_SETTINGS_CONFIGURE_ACCESS_DBLRUN,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,17,294,268,10
+END
+
+IDD_SETTINGS_PLUGLIST DIALOGEX 94, 7, 395, 315
+STYLE DS_MODALFRAME | DS_CONTROL | WS_CHILD
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CONTROL         "Подключение/отключение дополнительных модулей:",
+                    IDC_SETTINGS_PLUGLIST_CAPTION,"Static",SS_LEFTNOWORDWRAP | 
+                    WS_GROUP,7,7,381,14,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE
+    LTEXT           "Каталог поиска модулей:",
+                    IDC_SETTINGS_PLUGLIST_PLUGINSPATH_CAPTION,7,25,381,8
+    EDITTEXT        IDC_SETTINGS_PLUGLIST_PLUGINSPATH,7,34,381,12,
+                    ES_AUTOHSCROLL | ES_READONLY,WS_EX_ACCEPTFILES
+    LTEXT           "Найденные модули:",
+                    IDC_SETTINGS_PLUGLIST_FINDPLUGINS_CAPTION,7,51,108,8
+    LTEXT           "Активные модули:",
+                    IDC_SETTINGS_PLUGLIST_ACTVPLUGINS_CAPTION,280,51,108,8
+    LISTBOX         IDC_SETTINGS_PLUGLIST_FINDPLUGINS,7,61,108,247,LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_HSCROLL | 
+                    WS_GROUP | WS_TABSTOP
+    PUSHBUTTON      "Добавить >",IDC_SETTINGS_PLUGLIST_ADDONE,120,61,155,14,
+                    BS_FLAT | WS_GROUP
+    PUSHBUTTON      "< Исключить",IDC_SETTINGS_PLUGLIST_DELONE,120,81,155,14,
+                    BS_FLAT | NOT WS_TABSTOP
+    PUSHBUTTON      "Добавить все >>",IDC_SETTINGS_PLUGLIST_ADDALL,120,112,
+                    155,14,BS_FLAT | NOT WS_TABSTOP
+    PUSHBUTTON      "<< Исключить все",IDC_SETTINGS_PLUGLIST_DELALL,120,134,
+                    155,14,BS_FLAT | NOT WS_TABSTOP
+    PUSHBUTTON      "Применить",IDC_SETTINGS_PLUGLIST_ACCEPT,120,164,155,14,
+                    BS_FLAT | NOT WS_TABSTOP
+    PUSHBUTTON      "Обновить списки",IDC_SETTINGS_PLUGLIST_UPDATE,120,186,
+                    155,14,BS_FLAT | NOT WS_TABSTOP
+    LISTBOX         IDC_SETTINGS_PLUGLIST_ACTVPLUGINS,280,61,108,247,
+                    LBS_SORT | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | 
+                    WS_HSCROLL | WS_GROUP | WS_TABSTOP
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME | SS_SUNKEN | 
+                    WS_DISABLED,120,103,155,1
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME | SS_SUNKEN,120,155,
+                    155,1
+END
+
+IDD_SETTINGS_WIRC_ENTERDATA DIALOG DISCARDABLE  0, 0, 149, 28
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Введите количество повторений"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_SETTINGS_WIRC_ENTERDATA_REPEATS,7,7,78,14,
+                    ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDC_SETTINGS_WIRC_ENTERDATA_OK,92,7,50,14
+END
+
+IDD_HELP DIALOG DISCARDABLE  0, 0, 250, 250
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP
+FONT 8, "MS Sans Serif"
+BEGIN
+    LISTBOX         IDC_HELP_LIST,5,13,238,212,LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Закрыть",IDC_HELP_CLOSE,5,229,74,14,BS_FLAT
+    DEFPUSHBUTTON   "Открыть",IDC_HELP_OPEN,169,229,74,14,BS_FLAT
+    LTEXT           "Список найденных файлов помощи:",IDC_HELP_CAPTION,5,5,
+                    238,8
+END
+
+IDD_SETTINGS_MOUSE DIALOGEX 94, 7, 395, 315
+STYLE DS_MODALFRAME | DS_CONTROL | WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "Настройка сообщений от мыши:",
+                    IDC_SETTINGS_MOUSE_CAPTION,"Static",SS_LEFTNOWORDWRAP | 
+                    WS_GROUP,7,7,248,14,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE
+    CONTROL         "Включить отслеживание мыши",IDC_SETTINGS_MOUSE_MOUSEON,
+                    "Button",BS_AUTOCHECKBOX | BS_LEFT | BS_VCENTER,261,7,
+                    127,14
+    LTEXT           "Активные модули:",
+                    IDC_SETTINGS_MOUSE_ACTIVEPLUGINS_CAPTION,7,23,73,8
+    LTEXT           "Список команд модуля:",
+                    IDC_SETTINGS_MOUSE_COMMANDS_CAPTION,85,23,303,8
+    LISTBOX         IDC_SETTINGS_MOUSE_ACTIVEPLUGINS,7,31,73,259,LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "List1",IDC_SETTINGS_MOUSE_PLUGINCOMMANDS,"SysListView32",
+                    LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | 
+                    LVS_NOSORTHEADER | WS_BORDER | WS_TABSTOP,85,31,303,259
+    PUSHBUTTON      "Изменить",IDC_SETTINGS_KBRD_CHANGEKEY,85,294,95,14,
+                    BS_FLAT | WS_DISABLED
+    PUSHBUTTON      "Очистить",IDC_SETTINGS_KBRD_CLEAR,189,294,95,14,BS_FLAT | 
+                    WS_DISABLED
+    PUSHBUTTON      "Конфигурация",IDC_SETTINGS_KBRD_CONFIGURE,293,294,95,14,
+                    BS_FLAT | WS_DISABLED
+END
+
+IDD_SETTINGS_GESTURES DIALOGEX 94, 7, 395, 315
+STYLE DS_MODALFRAME | DS_CONTROL | WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "Настройка жестов мыши:",IDC_SETTINGS_GESTURES_CAPTION,
+                    "Static",SS_LEFTNOWORDWRAP | WS_GROUP,7,7,248,14,
+                    WS_EX_DLGMODALFRAME | WS_EX_CLIENTEDGE
+    CONTROL         "Включить отслеживание жестов",
+                    IDC_SETTINGS_GESTURES_GESTURESON,"Button",
+                    BS_AUTOCHECKBOX | BS_LEFT | BS_VCENTER,261,7,127,14
+    LTEXT           "Активные модули:",
+                    IDC_SETTINGS_GESTURES_ACTIVEPLUGINS_CAPTION,7,23,73,8
+    LTEXT           "Список команд модуля:",
+                    IDC_SETTINGS_GESTURES_COMMANDS_CAPTION,85,23,303,8
+    LISTBOX         IDC_SETTINGS_GESTURES_ACTIVEPLUGINS,7,31,73,259,LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "List1",IDC_SETTINGS_GESTURES_PLUGINCOMMANDS,
+                    "SysListView32",LVS_REPORT | LVS_SINGLESEL | 
+                    LVS_SHOWSELALWAYS | LVS_NOSORTHEADER | WS_BORDER | 
+                    WS_TABSTOP,85,31,303,259
+    PUSHBUTTON      "Изменить",IDC_SETTINGS_KBRD_CHANGEKEY,85,294,95,14,
+                    BS_FLAT | WS_DISABLED
+    PUSHBUTTON      "Очистить",IDC_SETTINGS_KBRD_CLEAR,189,294,95,14,BS_FLAT | 
+                    WS_DISABLED
+    PUSHBUTTON      "Конфигурация",IDC_SETTINGS_KBRD_CONFIGURE,293,294,95,14,
+                    BS_FLAT | WS_DISABLED
+    PUSHBUTTON      "Редактор...",IDC_BUTTON1,7,294,73,14,BS_FLAT | 
+                    WS_DISABLED
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_MAINMENU, DIALOG
+    BEGIN
+        LEFTMARGIN, 4
+        RIGHTMARGIN, 149
+        TOPMARGIN, 5
+        BOTTOMMARGIN, 115
+    END
+
+    IDD_ABOUT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 229
+        VERTGUIDE, 60
+        VERTGUIDE, 67
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 128
+        HORZGUIDE, 96
+    END
+
+    IDD_SETTINGS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 492
+        VERTGUIDE, 86
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 325
+    END
+
+    IDD_SETTINGS_KBRD, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 388
+        VERTGUIDE, 80
+        VERTGUIDE, 85
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 308
+        HORZGUIDE, 290
+    END
+
+    IDD_SETTINGS_WIRC, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 388
+        VERTGUIDE, 80
+        VERTGUIDE, 85
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 308
+        HORZGUIDE, 259
+    END
+
+    IDD_SETTINGS_CONFIGURE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 388
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 308
+    END
+
+    IDD_SETTINGS_PLUGLIST, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 388
+        VERTGUIDE, 115
+        VERTGUIDE, 120
+        VERTGUIDE, 275
+        VERTGUIDE, 280
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 308
+    END
+
+    IDD_SETTINGS_WIRC_ENTERDATA, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 142
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 21
+    END
+
+    IDD_HELP, DIALOG
+    BEGIN
+        LEFTMARGIN, 5
+        RIGHTMARGIN, 243
+        TOPMARGIN, 5
+        BOTTOMMARGIN, 243
+    END
+
+    IDD_SETTINGS_MOUSE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 388
+        VERTGUIDE, 80
+        VERTGUIDE, 85
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 308
+    END
+
+    IDD_SETTINGS_GESTURES, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 388
+        VERTGUIDE, 80
+        VERTGUIDE, 85
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 308
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_LOGO                BITMAP  DISCARDABLE     ".\\Resources\\bmp_logo.bmp"
+IDB_SETTINGS            BITMAP  DISCARDABLE     ".\\resources\\bmp_settings.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_LOGO                ICON    DISCARDABLE     ".\\resources\\ico_logo.ico"
+#endif    // Russian resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

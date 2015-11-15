@@ -1,0 +1,169 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Russian resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_RUS)
+#ifdef _WIN32
+LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
+#pragma code_page(1251)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_CURRENTSONGINFO DIALOGEX 0, 0, 296, 92
+STYLE DS_MODALFRAME | DS_SETFOREGROUND | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "Информация о текущей песне Winamp"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDD_CURRENTSONGINFO_OK,224,70,65,14,BS_FLAT
+    CONTROL         104,IDC_STATIC,"Static",SS_BITMAP | SS_REALSIZEIMAGE,7,7,
+                    21,20
+    LTEXT           "(01/08)",IDD_CURRENTSONGINFO_SONGSCOUNTER,20,8,269,8
+    LTEXT           "0:00",IDC_STATIC,8,40,15,8
+    CONTROL         "Progress1",IDD_CURRENTSONGINFO_PROGRESS,
+                    "msctls_progress32",PBS_SMOOTH | WS_BORDER,26,40,239,8
+    LTEXT           "#:##",IDD_CURRENTSONGINFO_SONGLENGHT,268,40,21,8
+    CTEXT           "#:##",IDD_CURRENTSONGINFO_POSITION,129,51,38,8
+    CTEXT           "ВОСПРОИЗВЕДЕНИЕ",IDD_CURRENTSONGINFO_STATUS,177,50,87,9,
+                    SS_CENTERIMAGE | SS_SUNKEN
+    LTEXT           "Битрейт:",IDC_STATIC,24,63,31,8
+    LTEXT           "Сэмплрейт:",IDC_STATIC,14,74,41,8
+    LTEXT           "192 Кбит/сек",IDD_CURRENTSONGINFO_BITRATE,57,63,111,8
+    LTEXT           "48 кГц",IDD_CURRENTSONGINFO_SAMPLERATE,57,74,111,8
+    LTEXT           "Sh+",IDD_CURRENTSONGINFO_SHUFFLE,178,63,15,8
+    LTEXT           "Lp+",IDD_CURRENTSONGINFO_LOOP,178,74,14,8
+    LTEXT           "Stay BRUTAL! ;)))",IDD_CURRENTSONGINFO_SONGTITLE,7,19,
+                    282,18
+END
+
+IDD_CONFIG DIALOGEX 0, 0, 314, 193
+STYLE DS_MODALFRAME | DS_SETFOREGROUND | DS_CENTER | WS_POPUP | WS_CAPTION
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "Конфигурация плагина Winamp"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Местонахождение Winamp:",IDC_STATIC,7,7,93,8
+    EDITTEXT        IDC_WINAMPFILENAME,7,16,300,12,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    PUSHBUTTON      "Просмотр...",IDC_BTN_GETWA_FILENAME_HD,7,31,147,14,
+                    BS_FLAT
+    PUSHBUTTON      "Найти в реестре...",IDC_BTN_GETWA_FILENAME_REGISTRY,160,
+                    31,147,14,BS_FLAT
+    LTEXT           "Класс окна Winamp:",IDC_STATIC,109,103,70,8
+    EDITTEXT        IDC_WINAMPCLASSNAME,109,112,198,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "Закрыть",IDC_CLOSE,107,172,200,14,BS_FLAT
+    GROUPBOX        "Показать/скрыть окна:",IDC_STATIC,7,98,94,67
+    CONTROL         "Окно Winamp",IDC_SH_MAIN,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,17,110,61,10
+    CONTROL         "Окно Equalizer",IDC_SH_EQUALIZER,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,17,123,64,10
+    CONTROL         "Окно Playlist",IDC_SH_PLAYLIST,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,17,136,57,10
+    CONTROL         "Окно Minibrowser",IDC_SH_BROWSER,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,17,149,73,10
+    LTEXT           "Любимый каталог:",IDC_STATIC,7,47,65,8
+    EDITTEXT        IDC_LIKEDIR,7,56,236,12,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Любимый плэйлист:",IDC_STATIC,7,71,70,8
+    EDITTEXT        IDC_LIKEFILE,7,80,236,12,ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "Просмотр...",IDC_BTN_LIKEDIR,246,55,61,14,BS_FLAT
+    PUSHBUTTON      "Просмотр...",IDC_BTN_LIKEFILE,246,79,61,14,BS_FLAT
+    CONTROL         "Воспроизведение при старте системы",IDC_CHECK1,"Button",
+                    BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,112,129,147,
+                    10
+    CONTROL         "Выключение компьютера при остановке плей листа",
+                    IDC_CHECK2,"Button",BS_AUTOCHECKBOX | WS_DISABLED | 
+                    WS_TABSTOP,112,144,193,10
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_CURRENTSONGINFO, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 289
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 84
+    END
+
+    IDD_CONFIG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 307
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 186
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_WINAMP_LOGO         BITMAP  DISCARDABLE     "Resources\\bmp_winamp.bmp"
+#endif    // Russian resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

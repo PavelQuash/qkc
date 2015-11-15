@@ -1,0 +1,44 @@
+Заголовок для файлов для cpp и h файлов
+
+/**************************************************************/
+/*  qshKeyCommander1 -                                        */
+/*------------------------------------------------------------*/
+/*                                                            */
+/*                                                            */
+/*                                                            */
+/*****2004***************************Copyright by <Quash!>*****/
+
+DEBUG    - убрать, исправить или дополнить
+MSGDEBUG - вывести позже более оформленные сообщения
+
+/*
+// *Отключение Runtime Library
+#pragma comment(linker,"/MERGE:.rdata=.text")
+#pragma comment(linker,"/FILEALIGN:512 /SECTION:.text,EWRX /IGNORE:4078")
+#pragma comment(linker,"/ENTRY:WinMain")
+#pragma comment(linker,"/NODEFAULTLIB")
+*/
+
+// Функция обработки сообщений, поступающих диалогу 
+BOOL CALLBACK Dlg(HWND hwndDlg, UINT message, WPARAM wParam, LPARAM lParam)
+{
+ switch (message)
+  {
+   case WM_CLOSE:   
+    EndDialog(hwndDlg,0);
+	return true;
+  }
+ return false;
+}
+
+    // ***Перевод интерфейса***
+    if (lstrcmp(Settings.Language,lng_default)!=0)
+     {
+      SendMessage(hwndDlg,WM_SETTEXT,0,(LPARAM)(LPCTSTR)Settings.LanguageStrings->MAINMENU_Window_Caption);
+      SendDlgItemMessage(hwndDlg,IDC_MAINMENU_SETTINGS,WM_SETTEXT,0,(LPARAM)(LPCTSTR)Settings.LanguageStrings->MAINMENU_Button_Settings);
+      SendDlgItemMessage(hwndDlg,IDC_MAINMENU_HELP,    WM_SETTEXT,0,(LPARAM)(LPCTSTR)Settings.LanguageStrings->MAINMENU_Button_Help);
+      SendDlgItemMessage(hwndDlg,IDC_MAINMENU_ABOUT,   WM_SETTEXT,0,(LPARAM)(LPCTSTR)Settings.LanguageStrings->MAINMENU_Button_About);
+      SendDlgItemMessage(hwndDlg,IDC_MAINMENU_HIDE,    WM_SETTEXT,0,(LPARAM)(LPCTSTR)Settings.LanguageStrings->MAINMENU_Button_Hide);
+      SendDlgItemMessage(hwndDlg,IDC_MAINMENU_QUIT,    WM_SETTEXT,0,(LPARAM)(LPCTSTR)Settings.LanguageStrings->MAINMENU_Button_Quit);
+     }
+    // ***
