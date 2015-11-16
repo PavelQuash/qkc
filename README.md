@@ -1,4 +1,4 @@
-# Описание проекта
+# qshKeyCommander
 
 Язык: C++ "хардкорно" на чистом WinAPI  
 IDE: Visual Studio 6.0  
